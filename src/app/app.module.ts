@@ -8,6 +8,7 @@ import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { SaladModule } from './salad/salad.module';
 import { OrderComponent } from './order/order.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     SharedMaterialModule,
     SaladModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
