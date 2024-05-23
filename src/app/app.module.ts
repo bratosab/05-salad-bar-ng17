@@ -5,15 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SharedMaterialModule } from './shared-material/shared-material.module';
+import { SaladModule } from './salad/salad.module';
+import { OrderComponent } from './order/order.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedMaterialModule
+    SharedMaterialModule,
+    SaladModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
