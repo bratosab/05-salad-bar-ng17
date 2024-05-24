@@ -13,7 +13,7 @@ describe('ToppingsService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule]
     });
     service = TestBed.inject(ToppingsService);
     httpTestingController = TestBed.inject(HttpTestingController);
