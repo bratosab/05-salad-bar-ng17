@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Topping } from '../models/topping.model';
+import { Observable, map, mergeMap, of, switchMap } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ToppingsService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getToppings() {
-    return this.http.get<Topping[]>('https://retoolapi.dev/udhTkG/toppings')
+  getToppings(): Observable<Topping[]> {
+    return this.http
+      .get<Topping[]>('https://retoolapi.dev/udhTkG/toppings')
   }
 }

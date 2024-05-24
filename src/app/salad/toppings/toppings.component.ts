@@ -21,8 +21,10 @@ export class ToppingsComponent implements OnInit {
       this.toppings = toppings;
     });
   }
-
+ 
   chooseTopping(topping: Topping) {
+    this.toppings = this.toppings.filter(t => t !== topping)
+
     this.orderService.addTopping(topping)
   }
 }
