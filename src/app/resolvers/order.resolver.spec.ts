@@ -4,7 +4,7 @@ import { ResolveFn } from '@angular/router';
 import { orderResolver } from './order.resolver';
 
 describe('orderResolver', () => {
-  const executeResolver: ResolveFn<boolean> = (...resolverParameters) => 
+  const executeResolver: ResolveFn<void> = (...resolverParameters) => 
       TestBed.runInInjectionContext(() => orderResolver(...resolverParameters));
 
   beforeEach(() => {

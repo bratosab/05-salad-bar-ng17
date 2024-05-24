@@ -1,12 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { SharedMaterialModule } from './shared-material/shared-material.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        SharedMaterialModule
       ],
       declarations: [
         AppComponent
@@ -30,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, salad-bar');
+    expect(compiled.querySelector('mat-toolbar > span')?.textContent).toContain('Salad Bar');
   });
 });
