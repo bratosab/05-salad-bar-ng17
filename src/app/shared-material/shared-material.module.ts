@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,

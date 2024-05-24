@@ -1,1 +1,15 @@
-<app-toppings></app-toppings>
+<div class="content">
+  <div class="column">
+    <app-toppings></app-toppings>
+  </div>
+  <div class="column">
+    <img src="./assets/salad.jpg" alt="Salad" class="salad-img" />
+    <h2>Your order :</h2>
+    <h3>Total price : {{ orderService.totalPrice | currency : "€" }}</h3>
+    <ul>
+      <li *ngFor="let topping of orderService.currentOrder.toppings">
+        {{ topping.name }} ({{ topping.price | currency : "€" }})
+      </li>
+    </ul>
+  </div>
+</div>

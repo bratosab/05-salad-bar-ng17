@@ -1,5 +1,8 @@
 <ul>
   <li *ngFor="let topping of toppings">
-    {{ topping.name }} ({{ topping.price | currency : "€" }})
+    {{ topping.name }} ({{ topping.price | currency : "€" }}) 
+    <button mat-icon-button (click)="chooseTopping(topping)">
+      <mat-icon>add</mat-icon>
+    </button>
   </li>
 </ul>
